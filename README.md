@@ -54,27 +54,32 @@
 
     <div class="container">
         <h2>احصل على كود الكوينات 💰</h2>
-        <p>اضغط على الزر أدناه للحصول على **10 كوينات** بعد مشاهدة الإعلان.</p>
+        <p>اضغط على الزر أدناه للحصول على <strong>10 كوينات</strong> بعد مشاهدة الإعلان.</p>
         <button onclick="showAdAndCode('code1', 'ABC123')">احصل على 10 كوينات</button>
         <div id="code1" class="code-container"></div>
 
         <hr>
 
-        <p>اضغط على الزر أدناه للحصول على **20 كوينات** بعد مشاهدة الإعلان.</p>
+        <p>اضغط على الزر أدناه للحصول على <strong>20 كوينات</strong> بعد مشاهدة الإعلان.</p>
         <button onclick="showAdAndCode('code2', 'DEF456')">احصل على 20 كوينات</button>
         <div id="code2" class="code-container"></div>
 
         <hr>
 
-        <p>اضغط على الزر أدناه للحصول على **40 كوينات** بعد مشاهدة الإعلان.</p>
+        <p>اضغط على الزر أدناه للحصول على <strong>40 كوينات</strong> بعد مشاهدة الإعلان.</p>
         <button onclick="showAdAndCode('code3', 'XYZ789')">احصل على 40 كوينات</button>
         <div id="code3" class="code-container"></div>
     </div>
 
     <script>
         function showAdAndCode(codeId, codeValue) {
-            // فتح إعلان Adsterra في نافذة جديدة
-            window.open("https://www.effectiveratecpm.com/ieqm7o9y?key=27ff0a99da2890f0e219be1008948eef", "_blank");
+            // فتح إعلان Adsterra كنافذة منبثقة (Popunder)
+            var newWin = window.open("https://www.effectiveratecpm.com/ieqm7o9y?key=27ff0a99da2890f0e219be1008948eef", "_blank", "width=800,height=600");
+
+            // في حال كان المتصفح يمنع النوافذ المنبثقة، يتم فتح الرابط في نفس الصفحة
+            if (!newWin || newWin.closed || typeof newWin.closed == 'undefined') {
+                window.location.href = "https://www.effectiveratecpm.com/ieqm7o9y?key=27ff0a99da2890f0e219be1008948eef";
+            }
 
             // تأخير ظهور الكود بعد 5 ثوانٍ
             setTimeout(function() {
@@ -83,6 +88,9 @@
             }, 5000);
         }
     </script>
+
+    <!-- إضافة Social Bar -->
+    <script type='text/javascript' src='//pl26087777.effectiveratecpm.com/ce/dc/49/cedc49f39b4ed4484f74f6d3f433eaa7.js'></script>
 
 </body>
 </html>
